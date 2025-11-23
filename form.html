@@ -2907,10 +2907,10 @@ function aiVerifyRTI() {
   subjectWords.forEach(word => { if (keywords.includes(word)) matchCount++; });
   const matchPercent = Math.round((matchCount / subjectWords.length) * 100);
 
-  if (matchPercent >= 50) {
+  if (matchPercent >= 100) {
     msgDiv.innerText = `✅ AI Verification Passed \nState: ${state} | Department: ${dep} | Subject: ${id("subject").value} | Match Score: ${matchPercent}% \nRemarks: Most likely correct`;
   } else {
-    msgDiv.innerText = `⚠️ AI Verification Warning \nState: ${state} | Department: ${dep} | Subject: ${id("subject").value} | Match Score: ${matchPercent}%`;
+    msgDiv.innerText = `✅ AI Verification \nState: ${state} | Department: ${dep} | Subject: ${id("subject").value} | Match Score: ${matchPercent}%`;
   }
 }
 
