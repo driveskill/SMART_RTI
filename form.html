@@ -122,6 +122,9 @@
 
 <script>
 
+window.onerror = function (msg, url, line) {
+  alert("Console Error:\n" + msg + "\nFile: " + url + "\nLine: " + line);
+};
 // ====== HELPER ======
 const id = x => document.getElementById(x);
 
